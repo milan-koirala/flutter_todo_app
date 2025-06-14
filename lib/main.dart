@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_simple_app/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +11,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: const Text('Simple Flutter App')),
-        body: const Center(
-          child: Text('Hello, Flutter!', style: TextStyle(fontSize: 24)),
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+      theme: ThemeData(primarySwatch: Colors.yellow),
     );
   }
 }
